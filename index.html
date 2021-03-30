@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Gotcha</title>
+</head>
+<body>
+    <style>
+body {
+    background-color: #000;
+}
+
+#myVideo {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+    </style>
+
+
+
+
+    
+    <div class="content">
+        <button id="myBtn" onclick="myFunction()">Registrer</button>
+        <video autoplay loop id="myVideo">
+            <source src="Rick Astley - Never Gonna Give You Up (Video)-dQw4w9WgXcQ.mp4" type="video/mp4">
+        </video>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        
+    </div>
+    
+
+
+
+
+
+      <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Gotcha";
+          } else {
+            video.pause();
+            btn.innerHTML = "HaHa!";
+          }
+        }
+        </script>
+</body>
+</html>
